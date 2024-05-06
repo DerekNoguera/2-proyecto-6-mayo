@@ -1,36 +1,66 @@
-.nav{
-    background-color: rgb(118, 115, 115);
-    height: 100px;
-    width: 100%;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.nav {
+  background-color: rgb(118, 115, 115);
+  height: 100px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.boton{
-    border-radius: 5px;
-    color: white;
-    font-family: cursive;
-    font-size: 18px;
-    background-color: transparent;
-    width: 250px;
-    height: 40x;
-    border: lightskyblue solid 3px;
+.boton {
+  border-radius: 5px;
+  color: white;
+  font-family: cursive;
+  font-size: 18px;
+  background-color: transparent;
+  width: 250px;
+  height: 40x;
+  border: lightskyblue solid 3px;
 }
-#modal{
-    height:600px;
-    width: 500px;
+#modal1 {
+  height: 600px;
+  width: 500px;
 }
-.grid-modal-numeros{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr)
+.grid-modal-numeros {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-.grid-numeros{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+.grid-numeros {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2%;
+  row-gap: 2%;
+  margin-top: 40px;
 }
-.grid-simbolos{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
+.grid-simbolos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 40px;
+  margin-left: 40px;
+  row-gap: 2%;
+}
+.input-modal {
+  margin-left: 10%;
+  height: 20%;
+  width: 80%;
+}
+.numeros {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.simbolos {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.boton-cerrar {
+  margin-top: 100px;
+  margin-left: 37%;
+  color: black;
+  height: 8%;
+  width: 23%;
+  border-radius: 10%;
+  border: solid 1px black;
 }
