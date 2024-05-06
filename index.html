@@ -12,37 +12,36 @@
     <header>
         <nav class="nav">
             <div class="div-nav">
-                <button class="boton" onclick="window.modal.showModal();">C A L C U L A D O R A</button><!--Abre el modal con la funcion
+                <button class="boton" onclick="window.modal1.showModal();">C A L C U L A D O R A</button><!--Abre el modal con la funcion
                 "window.modal.showModal();"-->
-                
-                <dialog id="modal">
+
+                <dialog id="modal1">
                     <div>
-                        <input type="text">
+                        <input class="input-modal" type="text">
                     </div>
                     <div class="grid-modal-numeros">
                         <div class="grid-numeros">
-                            <input type="button" value="1">
-                            <input type="button" value="2">
-                            <input type="button" value="3">
-                            <input type="button" value="4">
-                            <input type="button" value="5">
-                            <input type="button" value="6">
-                            <input type="button" value="7">
-                            <input type="button" value="8">
-                            <input type="button" value="9">
-                            <input type="button" value="0">
+                            <button class="numeros">1</button>
+                            <button class="numeros">2</button>
+                            <button class="numeros">3</button>
+                            <button class="numeros">4</button>
+                            <button class="numeros">5</button>
+                            <button class="numeros">6</button>
+                            <button class="numeros">7</button>
+                            <button class="numeros">8</button>
+                            <button class="numeros">9</button>
+                            <button class="numeros">0</button>
                         </div>
                         <div class="grid-simbolos">
-                            <input type="button" value="=">
-                            <input type="button" value="+">
-                            <input type="button" value="-">
-                            <input type="button" value="*">
-                            <input type="button" value="/">
-                            <input type="button" value="Propina">
+                            <input class="simbolos" type="button" value="=">
+                            <input class="simbolos" type="button" value="+">
+                            <input class="simbolos" type="button" value="-">
+                            <input class="simbolos" type="button" value="*">
+                            <input class="simbolos" type="button" value="/">
+                            <input class="simbolos" type="button" value="Propina">
                         </div>
-                        
                     </div>
-                    <button onclick="window.modal.close();">Cerrar</button><!--al darle click abre cierra el modal
+                    <button class="boton-cerrar" onclick="window.modal1.close();">Cerrar</button><!--al darle click abre cierra el modal
                     por la funcion "window.modal.close();"-->
                 </dialog>
             </div>
