@@ -19,5 +19,18 @@
     border: lightskyblue solid 3px;
 }
 #modal{
-    
+    height:600px;
+    width: 500px;
+}
+.grid-modal-numeros{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+}
+.grid-numeros{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.grid-simbolos{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
 }
