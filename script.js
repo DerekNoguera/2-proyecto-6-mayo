@@ -59,6 +59,8 @@
 // btnDivision.addEventListener("click", function () {
 //     screenTxt.textContent += "/"
 // })
+let propina = document.getElementById("propina")
+let Nopropina = document.getElementById("Nopropina")
 let screenTxt = document.getElementById("input")
 let btnC = document.getElementById("btnC")
 function numeros(numerosTodos) {// numeros son todos los numeros llamados desde html
@@ -81,5 +83,10 @@ btnIgual.addEventListener("click", function () {
     screenTxt.innerHTML = eval(screenTxt.innerHTML)
 })
 btnC.addEventListener("click", function () {
-    screenTxt.textContent = " "
+    screenTxt.innerHTML = " "
 })
+function porcentaje(porcentajes) {
+    screenTxt.innerHTML = screenTxt.innerHTML * porcentajes;
+    //screenTxt.innerHTML va a ser igual a screenTxt.innerHTML por el % apagar, 
+    //el porcentaje lo elige dentro de la calculadora
+}
