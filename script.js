@@ -60,9 +60,14 @@
 //     screenTxt.textContent += "/"
 // })
 let propina = document.getElementById("propina")
-let Nopropina = document.getElementById("Nopropina")
+let propinaTxt = document.getElementById("propinatxt")
 let screenTxt = document.getElementById("input")
 let btnC = document.getElementById("btnC")
+let btnp = document.getElementById("propine")
+let cancel = document.getElementById("cancel")
+let btnIgual = document.getElementById("btnI")
+let multiPropina = document.getElementById("btnP")
+let inputEscondido = document.getElementById("inputEscondido")
 function numeros(numerosTodos) {// numeros son todos los numeros llamados desde html
     screenTxt.innerHTML += numerosTodos
 }
@@ -78,15 +83,44 @@ function caracterMulti(multi) {
 function caracterDivi(Divi) {
     screenTxt.innerHTML += "/"
 }
-let btnIgual = document.getElementById("btnI")
 btnIgual.addEventListener("click", function () {
-    screenTxt.innerHTML = eval(screenTxt.innerHTML)
+    inputEscondido = eval(screenTxt.innerHTML)
+    console.log(inputEscondido);
+
 })
+
 btnC.addEventListener("click", function () {
     screenTxt.innerHTML = " "
 })
-function porcentaje(porcentajes) {
-    screenTxt.innerHTML = screenTxt.innerHTML * porcentajes;
-    //screenTxt.innerHTML va a ser igual a screenTxt.innerHTML por el % apagar, 
-    //el porcentaje lo elige dentro de la calculadora
+// function porcentaje(porcentajes) {
+//     screenTxt.innerHTML = screenTxt.innerHTML * porcentajes;
+//     //screenTxt.innerHTML va a ser igual a screenTxt.innerHTML por el % apagar, 
+//     //el porcentaje lo elige dentro de la calculadora
+// }
+// function mostrar() {
+//     document.getElementById('propinatxt').style.display = "block"
+//     document.getElementById("input").style.display = "none"
+// }
+btnp.addEventListener("click", function () {
+    document.getElementById('propinatxt').style.display = "block"
+    document.getElementById("input").style.display = "none"
+    propinaTxt.innerHTML = " "
+})
+btnIgual.addEventListener("click", function () {
+    propinaTxt.innerHTML = eval((inputEscondido.innerHTML * propinaTxt.innerHTML) / inputEscondido);
+})
+multiPropina.addEventListener("click", function () {
+    propinaTxt.innerHTML += "*"
+})
+btnC.addEventListener("click", function () {
+    propinaTxt.innerHTML = " "
+})
+
+cancel.addEventListener("click", function () {
+    document.getElementById('propinatxt').style.display = "none"
+    document.getElementById("input").style.display = "block"
+    screenTxt.innerHTML = " "
+})
+function numeros2(numerosxd) {
+    propinaTxt.innerHTML += numerosxd
 }

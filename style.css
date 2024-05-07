@@ -19,8 +19,9 @@
   border: lightskyblue solid 3px;
 }
 #modal1 {
-  height: 600px;
-  width: 500px;
+  border-radius: 10px;
+  height: 500px;
+  width: 400px;
 }
 .grid-modal-numeros {
   display: grid;
@@ -41,34 +42,67 @@
   row-gap: 2%;
 }
 .input-modal {
-  margin-left: 10%;
+  margin-top: 40px;
+  margin-left: 25%;
   height: 30px;
-  width: 80%;
+  width: 50%;
   border: 1px solid black;
   border-radius: 20px;
-  align-items: center;
   display: flex;
+  text-align: center;
+  align-content: center;
+}
+.input-modal2 {
+  margin-top: 40px;
+  margin-left: 20%;
+  height: 30px;
+  width: 60%;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  text-align: center;
+  align-content: center;
 }
 .numeros {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width: 50px;
+  height: 40px;
+  border-radius:20%;
+}
+.numeros:hover{
+  background-color: lightgreen;
+  transition: 0.5s ease ;
 }
 .simbolos {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+  width:55px;
+  height: 40px;
+  border-radius: 10%;
+}
+.simbolos:hover{
+  background-color: lightgreen;
+  transition: 0.5s ease ;
 }
 .boton-cerrar {
-  margin-top: 100px;
-  margin-left: 37%;
+  margin-top: 36%;
+  margin-left: 0%;
   color: black;
   height: 8%;
   width: 23%;
-  border-radius: 10%;
+  border-radius: 10px;
   border: solid 1px black;
+  
+}
+.boton-cerrar:hover{
+  background-color: lightblue;
+  transition: 1s ease;
+  border-radius: 15px;
+}
+.inputEscondido{
+  display: none;
 }
 
-#numeros{
+#propinatxt{
   display: none;
+}
+#input{
+  display: block;
 }
