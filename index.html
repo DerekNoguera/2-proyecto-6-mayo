@@ -21,24 +21,30 @@
                     </div>
                     <div class="grid-modal-numeros">
                         <div class="grid-numeros">
-                            <button id="btn1" class="numeros">1</button>
-                            <button id="btn2" class="numeros">2</button>
-                            <button id="btn3" class="numeros">3</button>
-                            <button id="btn4" class="numeros">4</button>
-                            <button id="btn5" class="numeros">5</button>
-                            <button id="btn6" class="numeros">6</button>
-                            <button id="btn7" class="numeros">7</button>
-                            <button id="btn8" class="numeros">8</button>
-                            <button id="btn9" class="numeros">9</button>
-                            <button id="btn0" class="numeros">0</button>
+                            <button id="btn1" onclick=numeros(1) class="numeros">1</button>
+                            <button id="btn2" onclick=numeros(2) class="numeros">2</button>
+                            <button id="btn3" onclick=numeros(3) class="numeros">3</button>
+                            <button id="btn4" onclick=numeros(4) class="numeros">4</button>
+
+                            <button id="btn5" onclick=numeros(5) class="numeros">5</button>
+                            <button id="btn6" onclick=numeros(6) class="numeros">6</button>
+                            <button id="btn7" onclick=numeros(7) class="numeros">7</button>
+                            <button id="btn8" onclick=numeros(8) class="numeros">8</button>
+
+                            <button id="btn9" onclick=numeros(9) class="numeros">9</button>
+                            <button id="btn0" onclick=numeros(0) class="numeros">0</button>
                         </div>
                         <div class="grid-simbolos">
                             <input id="btnI" class="simbolos" type="button" value="=">
-                            <input id="btnM" class="simbolos" type="button" value="+">
-                            <input id="btnL" class="simbolos" type="button" value="-">
-                            <input id="btnP" class="simbolos" type="button" value="*">
-                            <input id="btnD" class="simbolos" type="button" value="/">
-                            <input class="simbolos" type="button" value="Propina">
+                            <input id="btnM" onclick=caracterSuma() class="simbolos" type="button" value="+">
+                            <input id="btnL" onclick=caracterResta() class="simbolos" type="button" value="-">
+
+                            <input id="btnP" onclick=caracterMulti() class="simbolos" type="button" value="*">
+                            <input id="btnD" onclick=caracterDivi() class="simbolos" type="button" value="/">
+                            <input id="btnC" class="simbolos" type="button" value="C">
+
+                            <input id="btnDel" class="simbolos" type="button" value="Del">
+                            <input id="propina" class="simbolos" type="button" value="Propina">
                         </div>
                     </div>
                     <button class="boton-cerrar" onclick="window.modal1.close();">Cerrar</button><!--al darle click abre cierra el modal
