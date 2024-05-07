@@ -65,4 +65,3 @@ btnDivision.addEventListener("click", function () {
 btnIgual.addEventListener("click", function () {
     resultado.textContent = eval(resultado.textContent)
 })
-
