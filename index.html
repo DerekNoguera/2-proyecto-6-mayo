@@ -16,40 +16,50 @@
                 "window.modal.showModal();"-->
 
                 <dialog id="modal1">
+                    <button class="boton-cerrar" onclick="window.modal1.close();">Cerrar</button><!--al darle click abre cierra el modal
+                        por la funcion "window.modal.close();"-->
                     <div>
-                        <div id="input" class="input-modal" ></div>
-                        <div id="propinatxt" class="input-modal2" ></div>
-                        
+                        <div id="input" class="input-modal"></div>
+                        <div id="propinatxt" class="input-modal2"></div>
+
                     </div>
                     <div id="botones" class="grid-modal-numeros">
                         <div class="grid-numeros">
-                            <button id="btn1" onclick="numeros(1), numeros2(1)"  class="numeros">1</button>
-                            <button id="btn2" onclick="numeros(2), numeros2(2)"   class="numeros">2</button>
-                            <button id="btn3" onclick="numeros(3), numeros2(3)"   class="numeros">3</button>
-                            <button id="btn4" onclick="numeros(4), numeros2(4)"   class="numeros">4</button>
+                            <div class="simbolo-c">
+                                <input id="btnC" class="simbolos" type="button" value="C">
+                                <input id="btnDel" class="simbolos" type="button" value="Del">
+                                <input id="propine" class="simbolos" type="button" value="%" disabled>
+                            </div>
+                            <!-- <h1 class="xd">"--------------------"</h1> -->
+                            <div class="grid-1-9">
+                                <button id="btn7" onclick="numeros(7), numeros2(7)" class="numeros">7</button>
+                                <button id="btn8" onclick="numeros(8), numeros2(8)" class="numeros">8</button>
+                                <button id="btn9" onclick="numeros(9), numeros2(9)" class="numeros">9</button>
 
-                            <button id="btn5" onclick="numeros(5), numeros2(5)"   class="numeros">5</button>
-                            <button id="btn6" onclick="numeros(6), numeros2(6)"   class="numeros">6</button>
-                            <button id="btn7" onclick="numeros(7), numeros2(7)"  class="numeros">7</button>
-                            <button id="btn8" onclick="numeros(8), numeros2(8)"   class="numeros">8</button>
+                                <button id="btn4" onclick="numeros(4), numeros2(4)" class="numeros">4</button>
+                                <button id="btn5" onclick="numeros(5), numeros2(5)" class="numeros">5</button>
+                                <button id="btn6" onclick="numeros(6), numeros2(6)" class="numeros">6</button>
 
-                            <button id="btn9" onclick="numeros(9), numeros2(9)"   class="numeros">9</button>
-                            <button id="btn0" onclick="numeros(0), numeros2(0)"   class="numeros">0</button>
+                                <button id="btn1" onclick="numeros(1), numeros2(1)" class="numeros">1</button>
+                                <button id="btn2" onclick="numeros(2), numeros2(2)" class="numeros">2</button>
+                                <button id="btn3" onclick="numeros(3), numeros2(3)" class="numeros">3</button>
+                            </div>
+                            <div class="grid-cancel-0">
+                                <button id="btn0" onclick="numeros(0), numeros2(0)" class="numeros0">0</button>
+                                <input id="cancel" class="simbolos" type="button" value="Cancel">
+                            </div>
                         </div>
-                        <div class="grid-simbolos">
-                            <input id="btnI1" class="simbolos" type="button" value="=">
-                            <input id="btnI2" class="simbolos" type="button" value="=2">
-                            <input id="btnM" onclick=caracterSuma() class="simbolos" type="button" value="+">
+                        <!-- <div class="grid-simbolos"> -->
+                        <div class="simbolo-÷">
+                            <input id="btnD" onclick=caracterDivi() class="simbolos" type="button" value="÷">
+                            <input id="btnP" onclick=caracterMulti() class="simbolos" type="button" value="x">
                             <input id="btnL" onclick=caracterResta() class="simbolos" type="button" value="-">
-
-                            <input id="btnP" onclick=caracterMulti() class="simbolos" type="button" value="*">
-                            <input id="btnD" onclick=caracterDivi() class="simbolos" type="button" value="/">
-                            <input id="btnC" class="simbolos" type="button" value="C">
-
-                            <input id="btnDel" class="simbolos" type="button" value="Del">
-                            <input id="propine" class="simbolos" type="button" value="Propi" disabled>
-                            <input id="cancel" class="simbolos" type="button" value="Cancel">
+                            <input id="btnM" onclick=caracterSuma() class="simbolos" type="button" value="+">
+                            <input id="btnI1" class="simbolos" type="button" value="=">
+                            <input id="btnI2" class="simbolos2" type="button" value="=">
                         </div>
+
+                        <!-- </div> -->
                         <div class="botones-propina">
                             <!-- <input id="propina1" onclick= porcentaje(0.08) class="simbolos" type="button" value="8%"> -->
                             <!--para sacar el % es dividir mi % entre 100, ejemplo "8/100 = 0.08"-->
@@ -58,12 +68,10 @@
                             <input id="propina1" onclick= porcentaje(0.2) class="simbolos" type="button" value="20%"> -->
 
                         </div>
-                    </div>
-                    <button class="boton-cerrar" onclick="window.modal1.close();">Cerrar</button><!--al darle click abre cierra el modal
-                    por la funcion "window.modal.close();"-->
                 </dialog>
             </div>
         </nav>
+
         <img src="img/XOsX.gif" height="250px" width="200px" alt="">
     </header>
     <script src="script.js"></script>
