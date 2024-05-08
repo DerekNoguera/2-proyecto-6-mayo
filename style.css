@@ -106,3 +106,10 @@
 #input{
   display: block;
 }
+#btnI1{
+  display: block;
+}
+
+#btnI2{
+  display: none;
+}
