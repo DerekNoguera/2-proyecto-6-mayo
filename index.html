@@ -19,7 +19,7 @@
                     <div>
                         <div id="input" class="input-modal"></div>
                         <div id="inputEscondido" class="inputEscondido"></div>
-                        <div id="propinatxt" class="input-modal2" placeholder="Digita el % de propina"></div>
+                        <div id="propinatxt" class="input-modal2" aria-placeholder="Numero"></div>
                     </div>
                     <div id="botones" class="grid-modal-numeros">
                         <div class="grid-numeros">
@@ -37,7 +37,8 @@
                             <button id="btn0" onclick="numeros(0), numeros2(0)"   class="numeros">0</button>
                         </div>
                         <div class="grid-simbolos">
-                            <input id="btnI" class="simbolos" type="button" value="=">
+                            <input id="btnI1" class="simbolos" type="button" value="=">
+                            <input id="btnI2" class="simbolos" type="button" value="=2">
                             <input id="btnM" onclick=caracterSuma() class="simbolos" type="button" value="+">
                             <input id="btnL" onclick=caracterResta() class="simbolos" type="button" value="-">
 
@@ -46,7 +47,7 @@
                             <input id="btnC" class="simbolos" type="button" value="C">
 
                             <input id="btnDel" class="simbolos" type="button" value="Del">
-                            <input id="propine" class="simbolos" type="button" value="Propi">
+                            <input id="propine" class="simbolos" type="button" value="Propi" disabled>
                             <input id="cancel" class="simbolos" type="button" value="Cancel">
                         </div>
                         <div class="botones-propina">
