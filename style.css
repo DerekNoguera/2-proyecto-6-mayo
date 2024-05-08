@@ -52,6 +52,7 @@
   text-align: center;
   align-content: center;
 }
+
 .input-modal2 {
   margin-top: 40px;
   margin-left: 20%;
@@ -112,4 +113,19 @@
 
 #btnI2{
   display: none;
+}
+#btnM{
+  display: block;
+}
+#btnL{
+  display: block;
+}
+#btnP{
+  display: block;
+}
+#btnD{
+  display: block;
+}
+#btnC{
+  display: block;
 }

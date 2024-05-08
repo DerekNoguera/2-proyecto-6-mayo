@@ -35,21 +35,21 @@ function caracterDivi(Divi) {
 btnIgual.addEventListener("click", function () {
     let resultado = eval(screenTxt.innerHTML);
     // 
-    
+
     if (SumadorOperadores > 0) {
         document.getElementById("propine").disabled = false; // Habilita el botón de propina
     } else if (SumadorOperadores <= 0) {
         screenTxt.innerHTML = " ";
     } {
-        
+
     }
     // Muestra el resultado en screenTxt
     screenTxt.innerHTML = resultado; // screenTxt va a ser igual a resultado y resultado es igual a la suma de los strings con eval()
     // Calcula la propina
     btnIgual2.addEventListener("click", function () {
         let propina = parseFloat(propinaTxt.innerHTML); // Obtiene el valor de la propina que puse
-        let propinaCalculada = (resultado * propina) / 100;  // Hace el calculo de la propina
-        propinaTxt.innerHTML = propinaCalculada;    // Muestra la propina calculada en propinaTxt
+        let propinaCalculada = resultado * propina;  // Hace el calculo de la propina
+        propinaTxt.innerHTML = propinaCalculada / 100;    // Muestra la propina calculada en propinaTxt
         console.log(propinaCalculada);
     });
 });
@@ -74,6 +74,11 @@ btnp.addEventListener("click", function () {
     document.getElementById("input").style.display = "none"
     document.getElementById("btnI1").style.display = "none"
     document.getElementById("btnI2").style.display = "block"
+    document.getElementById("btnL").style.display = "none"
+    document.getElementById("btnP").style.display = "none"
+    document.getElementById("btnD").style.display = "none"
+    document.getElementById("btnC").style.display = "none"
+    document.getElementById("btnM").style.display = "none"
     propinaTxt.innerHTML = " "
 })
 
@@ -84,14 +89,18 @@ btnC.addEventListener("click", function () {
     propinaTxt.innerHTML = " "
 })
 
-cancel.addEventListener("click", function () {
+    cancel.addEventListener("click", function () {
     document.getElementById("propine").disabled = true;// cuando toque el boton de cancel entonces se bloquea el btn de propina
     document.getElementById('propinatxt').style.display = "none"
     document.getElementById("input").style.display = "block"
     document.getElementById("btnI1").style.display = "block"
     document.getElementById("btnI2").style.display = "none"
-    
-    
+    document.getElementById("btnL").style.display = "block"
+    document.getElementById("btnP").style.display = "block"
+    document.getElementById("btnD").style.display = "block"
+    document.getElementById("btnC").style.display = "block"
+    document.getElementById("btnM").style.display = "block"
+    propinaTxt.innerHTML = "Ingrese el % de propina"
     screenTxt.innerHTML = " "
 })
 function numeros2(numerosxd) {
@@ -99,7 +108,7 @@ function numeros2(numerosxd) {
 
 }
 del.addEventListener("click", function () {
-   screenTxt.innerHTML=  screenTxt.innerHTML.substring(0, screenTxt.innerHTML.length - 1)
-   //metodo substring dice que va a empezar desde 0, va a contar los caracteres que tiene mi screenTxt.InnerHTML
-   // y le va a restar -1 cuando toque el boton del 
+    screenTxt.innerHTML = screenTxt.innerHTML.substring(0, screenTxt.innerHTML.length - 1)
+    //metodo substring dice que va a empezar desde 0, va a contar los caracteres que tiene mi screenTxt.InnerHTML
+    // y le va a restar -1 cuando toque el boton del 
 })
