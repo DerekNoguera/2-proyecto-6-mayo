@@ -29,6 +29,10 @@ function caracterMulti(multi) {
 }
 function caracterDivi(Divi) {
     screenTxt.innerHTML += "/"
+    if (screenTxt.innerHTML < "/") {
+        console.log();
+
+    }
     SumadorOperadores++;
 }
 
@@ -111,4 +115,4 @@ del.addEventListener("click", function () {
     screenTxt.innerHTML = screenTxt.innerHTML.substring(0, screenTxt.innerHTML.length - 1)
     //metodo substring dice que va a empezar desde 0, va a contar los caracteres que tiene mi screenTxt.InnerHTML
     // y le va a restar -1 cuando toque el boton del 
-})
+    })

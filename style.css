@@ -19,20 +19,47 @@
   border: lightskyblue solid 3px;
 }
 #modal1 {
-  border-radius: 10px;
-  height: 500px;
-  width: 400px;
+  border-radius: 35px;
+  border: solid rgb(131, 128, 128) 1px;
+  box-shadow: 2px 2px 2px 1px grey;
+  height: 520px;
+  width: 250px;
+  background-color: black;
 }
 .grid-modal-numeros {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.grid-numeros {
+/* .grid-numeros {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1,1fr);
   column-gap: 2%;
-  row-gap: 2%;
-  margin-top: 40px;
+  margin-top: 40px; */
+/* } */
+.grid-1-9 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 12%;
+  row-gap: 5%;
+  margin-top: 5%; 
+}
+.grid-cancel-0 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 12%;
+  margin-top: 14%;
+}
+.simbolo-÷ {
+  display: grid;
+  grid-template-columns: repeat(1, 50px);
+  row-gap: 7px;
+  margin-left: 45%;
+ 
+}
+.simbolo-c {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 12%;
 }
 .grid-simbolos {
   display: grid;
@@ -42,45 +69,98 @@
   row-gap: 2%;
 }
 .input-modal {
-  margin-top: 40px;
-  margin-left: 25%;
-  height: 30px;
-  width: 50%;
-  border: 1px solid black;
+  margin-top: -40px;
+  margin-left: 0%;
+  height: 130px;
+  width: 100%;
   border-radius: 20px;
   display: flex;
-  text-align: center;
-  align-content: center;
-}
+  text-align: end;
+  align-content: end;
+  color: white;
+  font-size: 25px;
+  font-family: cursive;
+  border-color: white;
+  margin-bottom: 10px;
 
+}
 .input-modal2 {
-  margin-top: 40px;
-  margin-left: 20%;
-  height: 30px;
-  width: 60%;
-  border: 1px solid black;
+  margin-top: -40px;
+  margin-left: 0%;
+  height: 130px;
+  width: 100%;
   border-radius: 20px;
   display: flex;
-  text-align: center;
-  align-content: center;
+  text-align: end;
+  align-content: end;
+  color: white;
+  font-size: 25px;
+  font-family: cursive;
+  border-color: white;
+  margin-bottom: 10px;
 }
 .numeros {
   width: 50px;
-  height: 40px;
-  border-radius:20%;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-family: cursive;
+  font-size: 15px;
+  background-color: lightgrey;
+  border: none;
 }
-.numeros:hover{
-  background-color: lightgreen;
-  transition: 0.5s ease ;
+.numeros:hover {
+  background-color: grey;
+  transition: 0.5s ease;
+  font-family: cursive;
+  font-size: 15px;
+  border: none;
+}
+.numeros0 {
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  font-family: cursive;
+  font-size: 15px;
+  background-color: lightgrey;
+  border: none;
+}
+.numeros0:hover {
+  background-color: grey;
+  transition: 0.5s ease;
+  font-family: cursive;
+  font-size: 15px;
+  border: none;
 }
 .simbolos {
-  width:55px;
-  height: 40px;
-  border-radius: 10%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  background-color: orange;
+  font-family: cursive;
+  font-size: 15px;
+  border: none;
 }
-.simbolos:hover{
-  background-color: lightgreen;
-  transition: 0.5s ease ;
+.simbolos2{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  background-color: orange;
+  font-family: cursive;
+  font-size: 15px;
+  border: none;
+  margin-left: -65px;
+}
+.simbolos:hover {
+  background-color: rgb(220, 220, 220);
+  color: orange;
+  font-family: cursive;
+  font-size: 15px;
+  transition: 0.5s ease;
+  border: none;
 }
 .boton-cerrar {
   margin-top: 36%;
@@ -90,42 +170,47 @@
   width: 23%;
   border-radius: 10px;
   border: solid 1px black;
-  
 }
-.boton-cerrar:hover{
+.boton-cerrar:hover {
   background-color: lightblue;
   transition: 1s ease;
   border-radius: 15px;
 }
-.inputEscondido{
+.inputEscondido {
   display: none;
 }
 
-#propinatxt{
+#propinatxt {
   display: none;
 }
-#input{
+#input {
   display: block;
 }
-#btnI1{
+#btnI1 {
   display: block;
 }
 
-#btnI2{
+#btnI2 {
   display: none;
 }
-#btnM{
+#btnM {
   display: block;
 }
-#btnL{
+#btnL {
   display: block;
 }
-#btnP{
+#btnP {
   display: block;
 }
-#btnD{
+#btnD {
   display: block;
 }
-#btnC{
+#btnC {
   display: block;
 }
+/* .xd{
+  position: absolute;
+  margin-top: 178px;
+  margin-left: 100px;
+  color: white;
+} */
