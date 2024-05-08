@@ -19,11 +19,8 @@ function caracterSuma(suma) {
     screenTxt.innerHTML += "+"
     SumadorOperadores++;//si se usa una vez el operador + entocnes SumadorOperadores va sumarle 1
     let CaracterRepeat = screenTxt.innerHTML
-    if (CaracterRepeat[CaracterRepeat.length - 2] === "+") {
-        let valor = CaracterRepeat.split()
-        valor.pop()//el .pop() no me esta leyendo las posiciones de el array
-        console.log(valor);
-        console.log("nosepuederepetir");
+    if (CaracterRepeat[CaracterRepeat.length - 2] == "+" || CaracterRepeat[CaracterRepeat.length - 1] == "-" ) {
+        let valor = CaracterRepeat.substring(0, CaracterRepeat.length -1)
         let valor2 = valor.toString()
         let valor3 = valor2.split(',').join('')
         console.log(valor3);
