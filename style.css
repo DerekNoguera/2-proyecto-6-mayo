@@ -106,7 +106,7 @@
   color: white;
   font-family: cursive;
   font-size: 15px;
-  background-color: lightgrey;
+  background-color: rgb(61, 61, 61);
   border: none;
 }
 .numeros:hover {
@@ -123,7 +123,7 @@
   color: white;
   font-family: cursive;
   font-size: 15px;
-  background-color: lightgrey;
+  background-color: rgb(61, 61, 61);
   border: none;
 }
 .numeros0:hover {
@@ -138,7 +138,7 @@
   height: 50px;
   border-radius: 50%;
   color: white;
-  background-color: orange;
+  background-color: rgb(255, 196, 0);
   font-family: cursive;
   font-size: 15px;
   border: none;
@@ -148,15 +148,25 @@
   height: 50px;
   border-radius: 50%;
   color: white;
-  background-color: orange;
+  background-color: rgb(255, 196, 0);
   font-family: cursive;
   font-size: 15px;
   border: none;
   margin-left: -65px;
 }
+.simbolos1{
+   width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: black;
+  background-color: rgb(219, 217, 213);
+  font-family: cursive;
+  border: none;
+}
+
 .simbolos:hover {
   background-color: rgb(220, 220, 220);
-  color: orange;
+  color: rgb(255, 196, 0);
   font-family: cursive;
   font-size: 15px;
   transition: 0.5s ease;
@@ -165,14 +175,17 @@
 .boton-cerrar {
   margin-top: 36%;
   margin-left: 0%;
-  color: black;
+  color: transparent !important;
   height: 8%;
   width: 23%;
-  border-radius: 10px;
-  border: solid 1px black;
+background-color: transparent;
+border: none !important;
+}
+.mover-todo{
+  margin-top: 20px;
 }
 .boton-cerrar:hover {
-  background-color: lightblue;
+  background-color: transparent !important;
   transition: 1s ease;
   border-radius: 15px;
 }
