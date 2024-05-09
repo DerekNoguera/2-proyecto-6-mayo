@@ -1,4 +1,3 @@
-
 let propina = document.getElementById("propina")
 let propinaTxt = document.getElementById("propinatxt")
 let screenTxt = document.getElementById("input")
@@ -11,22 +10,22 @@ let multiPropina = document.getElementById("btnP")
 let del = document.getElementById("btnDel")
 let SumadorOperadores = 0;//variable donde se van a guardar cuantas vaces se usaron los operadores como "+,-,*,/" 
 //let inputEscondido = document.getElementById("inputEscondido")
-
 function numeros(numerosTodos) {// numeros son todos los numeros llamados desde html
     screenTxt.innerHTML += numerosTodos
 }
 function caracterSuma() {
     let screenText = screenTxt.innerHTML.trim(); // screenText que es una variable que se creo para mentener lo que se muestra
-//en pantalla va a ser igual a lo que se muestra en pantalla y el .trim() es para eliminar los campos en blanco de que deja
-//un string
+    //en pantalla va a ser igual a lo que se muestra en pantalla y el .trim() es para eliminar los campos en blanco de que deja
+    //un string
     SumadorOperadores++;
     if (screenText.length === 0 || !esOperador(screenText.charAt(screenText.length - 1))) {
-    // si el tamaño de lo que se muestra en pantalla y es estrictamente igual a 0, o No esOpera(lo que muestra en pantalla.charAt(screenText.length
-  //-1) es decir si el ultimo caracter de lo que se muestra en pantalla es un operador entonces se va a agregar un + en pantalla
-  // el No esOperador es una funcion que va a tener como parametros los opeadores "+,*,-,/"
-    //para que se repita el mismo prodecimiento el los otros botones
-    //https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
+        // si el tamaño de lo que se muestra en pantalla y es estrictamente igual a 0, o No esOpera(lo que muestra en pantalla.charAt(screenText.length
+        //-1) es decir si el ultimo caracter de lo que se muestra en pantalla es un operador entonces se va a agregar un + en pantalla
+        // el No esOperador es una funcion que va a tener como parametros los opeadores "+,*,-,/"
+        //para que se repita el mismo prodecimiento el los otros botones
+        //https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
         screenTxt.innerHTML += '+';
+        document.getElementById("propine").disabled = true;
     }
 }
 function caracterResta() {
@@ -34,8 +33,7 @@ function caracterResta() {
     SumadorOperadores++;
     if (screenText.length === 0 || !esOperador(screenText.charAt(screenText.length - 1))) {
         screenTxt.innerHTML += '-';
-    }else{
-        console.log(screenTxt);
+        document.getElementById("propine").disabled = true;
     }
     //es la misma documentacion de la función caracterSuma
 }
@@ -44,6 +42,7 @@ function caracterMulti() {
     SumadorOperadores++;
     if (screenText.length === 0 || !esOperador(screenText.charAt(screenText.length - 1))) {
         screenTxt.innerHTML += '*';
+        document.getElementById("propine").disabled = true;
     }
     //es la misma documentacion de la función caracterSuma
 }
@@ -52,6 +51,7 @@ function caracterDivi() {
     SumadorOperadores++;
     if (screenText.length === 0 || !esOperador(screenText.charAt(screenText.length - 1))) {
         screenTxt.innerHTML += '/';
+        document.getElementById("propine").disabled = true;
     }
     //es la misma documentacion de la función caracterSuma
 }
@@ -60,32 +60,34 @@ function esOperador(operadoresMath) {
     // esta funcion esOperador tiene como valores los operadores, retorna los el parametro con los operadores para comparar
     // sus valores en la función de suma,resta,multiplicacion y division.
 }
-
 btnIgual.addEventListener("click", function () {
     let resultado = eval(screenTxt.innerHTML);
     // 
-
     if (SumadorOperadores > 0) {
         document.getElementById("propine").disabled = false; // Habilita el botón de propina
     } else if (SumadorOperadores <= 0) {
         screenTxt.innerHTML = " ";
     } {
-
     }
+    if (screenTxt.innerHTML ===  " ") {
+        console.log("d");
+    } else {
+        screenTxt.innerHTML = "Su monto es  " + resultado; 
+        gato =resultado
+        // screenTxt va a ser igual a resultado y resultado es igual a la suma de los strings con eval()
     // Muestra el resultado en screenTxt
-    screenTxt.innerHTML = resultado; // screenTxt va a ser igual a resultado y resultado es igual a la suma de los strings con eval()
+        } 
+    // screenTxt.innerHTML = resultado; 
+    // alert("el monto a pagar es " + resultado)
     // Calcula la propina
     btnIgual2.addEventListener("click", function () {
         let propina = parseFloat(propinaTxt.innerHTML); // Obtiene el valor de la propina que puse
         let propinaCalculada = resultado * propina;  // Hace el calculo de la propina
-        propinaTxt.innerHTML = propinaCalculada / 100;    // Muestra la propina calculada en propinaTxt
+        propinaTxt.innerHTML = propinaCalculada / 100 +  gato + " USD";    // Muestra la propina calculada en propinaTxt
+        alert("Su cuenta pagar con propina es de " + propinaTxt.innerHTML + " USD")
         console.log(propinaCalculada);
     });
 });
-
-
-
-
 btnC.addEventListener("click", function () {
     screenTxt.innerHTML = " "
 })
@@ -110,15 +112,15 @@ btnp.addEventListener("click", function () {
     document.getElementById("btnM").style.display = "none"
     propinaTxt.innerHTML = " "
 })
-
 multiPropina.addEventListener("click", function () {
     propinaTxt.innerHTML += "*"
 })
 btnC.addEventListener("click", function () {
+    document.getElementById("propine").disabled = true;
+
     propinaTxt.innerHTML = " "
 })
-
-    cancel.addEventListener("click", function () {
+cancel.addEventListener("click", function () {
     document.getElementById("propine").disabled = true;// cuando toque el boton de cancel entonces se bloquea el btn de propina
     document.getElementById('propinatxt').style.display = "none"
     document.getElementById("input").style.display = "block"
@@ -133,14 +135,14 @@ btnC.addEventListener("click", function () {
     screenTxt.innerHTML = " "
     propinaTxt.innerHTML = " "
     propinaCalculada = " "
-    location.reload()
+ location.reload()
 })
 function numeros2(numerosxd) {
     propinaTxt.innerHTML += numerosxd
-
 }
 del.addEventListener("click", function () {
     screenTxt.innerHTML = screenTxt.innerHTML.substring(0, screenTxt.innerHTML.length - 1)
+    propinaTxt.innerHTML = propinaTxt.innerHTML.substring(0, propinaTxt.innerHTML.length -1)
     //metodo substring dice que va a empezar desde 0, va a contar los caracteres que tiene mi screenTxt.InnerHTML
     // y le va a restar -1 cuando toque el boton del 
-    })
+})
