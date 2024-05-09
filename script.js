@@ -15,33 +15,50 @@ let SumadorOperadores = 0;//variable donde se van a guardar cuantas vaces se usa
 function numeros(numerosTodos) {// numeros son todos los numeros llamados desde html
     screenTxt.innerHTML += numerosTodos
 }
-function caracterSuma(suma) {
-    screenTxt.innerHTML += "+"
-    SumadorOperadores++;//si se usa una vez el operador + entocnes SumadorOperadores va sumarle 1
-    let CaracterRepeat = screenTxt.innerHTML
-    if (CaracterRepeat[CaracterRepeat.length - 2] == "+" || CaracterRepeat[CaracterRepeat.length - 1] == "-" ) {
-        let valor = CaracterRepeat.substring(0, CaracterRepeat.length -1)
-        let valor2 = valor.toString()
-        let valor3 = valor2.split(',').join('')
-        console.log(valor3);
-        screenTxt.innerHTML= valor3;
-    } 
-}
-function caracterResta(resta) {
-    screenTxt.innerHTML += "-"
+function caracterSuma() {
+    let screenText = screenTxt.innerHTML.trim(); // screenText que es una variable que se creo para mentener lo que se muestra
+//en pantalla va a ser igual a lo que se muestra en pantalla y el .trim() es para eliminar los campos en blanco de que deja
+//un string
     SumadorOperadores++;
-}
-function caracterMulti(multi) {
-    screenTxt.innerHTML += "*"
-    SumadorOperadores++;
-}
-function caracterDivi(Divi) {
-    screenTxt.innerHTML += "/"
-    if (screenTxt.innerHTML < "/") {
-        console.log();
-
+    if (screenText.length === 0 || !esOperador(screenText.charAt(screenText.length - 1))) {
+    // si el tamaño de lo que se muestra en pantalla y es estrictamente igual a 0, o No esOpera(lo que muestra en pantalla.charAt(screenText.length
+  //-1) es decir si el ultimo caracter de lo que se muestra en pantalla es un operador entonces se va a agregar un + en pantalla
+  // el No esOperador es una funcion que va a tener como parametros los opeadores "+,*,-,/"
+    //para que se repita el mismo prodecimiento el los otros botones
+    //https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
+        screenTxt.innerHTML += '+';
     }
+}
+function caracterResta() {
+    let screenText = screenTxt.innerHTML.trim();
     SumadorOperadores++;
+    if (screenText.length === 0 || !esOperador(screenText.charAt(screenText.length - 1))) {
+        screenTxt.innerHTML += '-';
+    }else{
+        console.log(screenTxt);
+    }
+    //es la misma documentacion de la función caracterSuma
+}
+function caracterMulti() {
+    let screenText = screenTxt.innerHTML.trim();
+    SumadorOperadores++;
+    if (screenText.length === 0 || !esOperador(screenText.charAt(screenText.length - 1))) {
+        screenTxt.innerHTML += '*';
+    }
+    //es la misma documentacion de la función caracterSuma
+}
+function caracterDivi() {
+    let screenText = screenTxt.innerHTML.trim();
+    SumadorOperadores++;
+    if (screenText.length === 0 || !esOperador(screenText.charAt(screenText.length - 1))) {
+        screenTxt.innerHTML += '/';
+    }
+    //es la misma documentacion de la función caracterSuma
+}
+function esOperador(operadoresMath) {
+    return operadoresMath === '+' || operadoresMath === '-' || operadoresMath === '*' || operadoresMath === '/';
+    // esta funcion esOperador tiene como valores los operadores, retorna los el parametro con los operadores para comparar
+    // sus valores en la función de suma,resta,multiplicacion y division.
 }
 
 btnIgual.addEventListener("click", function () {
@@ -114,6 +131,9 @@ btnC.addEventListener("click", function () {
     document.getElementById("btnM").style.display = "block"
     propinaTxt.innerHTML = "Ingrese el % de propina"
     screenTxt.innerHTML = " "
+    propinaTxt.innerHTML = " "
+    propinaCalculada = " "
+    location.reload()
 })
 function numeros2(numerosxd) {
     propinaTxt.innerHTML += numerosxd
