@@ -10,14 +10,14 @@
 
 <body>
     <div>
-        <form id="login1">
+        <form aria-required="false" >
             <h1>Login</h1>
             <div>
-                <input id="user" type="text" placeholder="Ingrese su usuario" required>
-                <input id="password" type="password" placeholder="Contraseña" required>
+                <input id="user" type="email" placeholder="Ingrese su usuario" required autofocus>
+                <input id="password" type="password" placeholder="Contraseña" required autofocus>
             </div>
             <div>
-                <input type="button" value="Login">
+                <input id="login1" type="button" value="Login">
             </div>
             <p>No tienes cuenta?</p><a href="http://">Registrate aqui</a>
         </form>
@@ -26,9 +26,9 @@
         <form id="register1">
             <h1>Register</h1>
             <div>
-                <input type="email" name="" id="correo" placeholder="Ingrese su email" required>
-                <input type="text" name="" id="user-register" placeholder="Nombre de usuario" required>
-                <input type="password" name="" id="password-register" placeholder="Crear Contraseña" required>
+                <input type="email" name="" id="correo" placeholder="Ingrese su email" required autofocus>
+                <input type="text" name="" id="user-register" placeholder="Nombre de usuario" required autofocus>
+                <input type="password" name="" id="password-register" placeholder="Crear Contraseña" required autofocus>
             </div>
             <div>
                 <input id="ingresar" type="button" value="Ingresar">
