@@ -1,0 +1,55 @@
+*{
+    background-color: black;
+}
+#ocultar1{
+    display: block;
+    height: auto;
+    width: 400px;
+}
+.login-register{
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+#ocultar2{
+    display: none;
+    height: auto;
+    width: 400px;
+}
+.container{
+    margin-left: 35%;
+    height: auto;
+    width: 500px;
+}
+.objetos-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputxt{ 
+    height: 20px;
+    width: 200px;
+    border-radius: 10px ;
+    border-color: blue;
+    color: rgb(0, 0, 0);
+    background-color: white;
+}
+.letras{
+    color: white;
+    font-family: cursive;
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+.btn-login{
+    margin-top: 20px;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    color: black    ;
+    background-color: white;
+}
