@@ -69,6 +69,7 @@ btnIgual.addEventListener("click", function () {
         screenTxt.innerHTML = " ";
     } {
     }
+
     if (screenTxt.innerHTML ===  " ") {
         console.log("d");
     } else {
