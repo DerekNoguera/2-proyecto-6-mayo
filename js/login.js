@@ -35,8 +35,8 @@ registros.addEventListener("click", (e) => {
     let usuariosRegistrados = datos.find(user => user.email == email)//usuariosRegistrados va a ser igual a user.find es encontrar usuario y va a buscar si user => //user.email es igual a email
     // solamente el registro va a funcionar si el email no es estrictamente igual email, si no es el mismo email entonces se puede registrar
     if (usuariosRegistrados) {
-        document.getElementById("ocultar2").style.display = 'none';
-        document.getElementById("ocultar1").style.display = "block"
+                // document.getElementById("ocultar2").style.display = 'none';
+                // document.getElementById("ocultar1").style.display = "block"
         return alert("El usuario ya esta registrado") //si usuarios registrado es verdadero entonces quiero que me retorne una alerta 
     }
     datos.push({ user: userRegister, email: email, password: passwordRegister })//si el usuarioRegistrado es falso entonces a mi array "users" se le agrega  //user: userRegister, email: email, password: passwordRegister

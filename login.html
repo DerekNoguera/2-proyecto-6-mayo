@@ -8,24 +8,26 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 
-<body>
+<body class="body">
     <div class="container">
         <div id="ocultar1">
             <form aria-required="false">
-                <h1  class="login-register">Login</h1>
+                <h1 class="login">Login</h1>
                 <div class="objetos-login">
-                    <div>
-                        <label class="letras" for="">Ingrese su email</label><br>
-                        <input class="inputxt" id="user" type="email" placeholder="Ingrese su usuario" required autofocus>
+                    <div class="login-div1">
+                        <label class="letrasInput-Login" for="">Email</label><br>
+                        <input class="inputxt" id="user" type="email" placeholder="Ingrese su email" required autofocus>
                     </div>
-                    <div>
-                        <label class="letras" for="">Ingresar contraseña</label><br>
-                        <input class="inputxt" id="password" type="password" placeholder="Contraseña" required autofocus>
+                    <div class="login-div2">
+                        <label class="letrasInput-Login" for="">Contraseña</label><br>
+                        <input class="inputxt" id="password" type="password" placeholder="Ingrese su contraseña"
+                            required autofocus>
                     </div>
                     <div>
                         <input class="btn-login" id="login1" type="button" value="Login">
-                        <p class="letras">No tienes cuenta?</p>
-                        <p class="letras" id="link-register">Registrate aqui</p>
+                        <hr>
+                        <p class="letras-text-final">No tienes cuenta?</p>
+                        <p class="letras-link" id="link-register">Registrate aqui</p>
                     </div>
 
                 </div>
@@ -34,28 +36,27 @@
 
         <div id="ocultar2">
             <form id="register1">
-                <h1 class="login-register">Register</h1>
-                <div>
-                    <div>
-                        <label for="">Ingrese su correo</label><br>
-                        <input type="email" name="" id="correo" placeholder="Ingrese su email" required>
+                <h1 class="register">Register</h1>
+                <div class="objetos-register">
+                    <div class="register-div1">
+                        <label class="letrasInput-Register" for="">Email</label><br>
+                        <input class="inputxt" type="email" name="" id="correo" placeholder="Ingrese su email" required>
                     </div>
-                    <div>
-                        <label for="">Ingrese su nombre de usuario</label><br>
-                        <input type="text" name="" id="user-register" placeholder="Nombre de usuario" required>
+                    <div class="register-div2">
+                        <label class="letrasInput-Register" for="">User name</label><br>
+                        <input class="inputxt" type="text" name="" id="user-register" placeholder="Nombre de usuario"
+                            required>
                     </div>
-                    <div>
-                        <label for="">Cree su contraseña</label><br>
-                        <input type="password" name="" id="password-register" placeholder="Crear Contraseña" required>
+                    <div class="register-div3">
+                        <label class="letrasInput-Register" for="">Password</label><br>
+                        <input class="inputxt" type="password" name="" id="password-register"
+                            placeholder="Crear Contraseña" required>
                     </div>
-
-
+                    <input class="btn-register" id="ingresar" type="button" value="Ingresar">
+                    <hr>
+                    <p class="letras-text-final">Ya tienes una cuenta?</p>
+                    <p class="letras-link2" id="link-singup">Login</p>
                 </div>
-                <div>
-                    <input id="ingresar" type="button" value="Ingresar">
-                </div>
-                <p>Ya tienes una cuenta?</p>
-                <p id="link-singup">Sing Up</p>
             </form>
         </div>
     </div>
