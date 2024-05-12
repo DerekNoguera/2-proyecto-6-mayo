@@ -73,7 +73,7 @@ btnIgual.addEventListener("click", function () {
     if (screenTxt.innerHTML ===  " ") {
         console.log("d");
     } else {
-        screenTxt.innerHTML = "Su monto es  " + resultado; 
+        screenTxt.innerHTML = resultado; 
         gato =resultado
         // screenTxt va a ser igual a resultado y resultado es igual a la suma de los strings con eval()
     // Muestra el resultado en screenTxt

@@ -1,55 +1,189 @@
-*{
-    background-color: black;
+.body {
+    background: rgb(0, 0, 0);
+
 }
-#ocultar1{
+
+#ocultar1 {
     display: block;
-    height: auto;
+    height: 400px;
     width: 400px;
+    background-color: #0b1721;
+    margin-top: 25%;
+    box-shadow: 0 0 40px white;
 }
-.login-register{
+
+.login {
     text-align: center;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 10px;
+    padding-top: 25px;
 }
-#ocultar2{
+
+.register {
+    text-align: center;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    padding-top: 25px;
+}
+
+#ocultar2 {
     display: none;
-    height: auto;
+    height: 500px;
     width: 400px;
+    background-color: #0b1721;
+    box-shadow: 0 0 40px white;
+    margin-top: 20%;
 }
-.container{
+
+.container {
     margin-left: 35%;
     height: auto;
     width: 500px;
 }
-.objetos-login{
+
+.objetos-login {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.inputxt{ 
+
+.objetos-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputxt {
     height: 20px;
     width: 200px;
-    border-radius: 10px ;
-    border-color: blue;
-    color: rgb(0, 0, 0);
-    background-color: white;
+    border: none;
+    border-bottom: solid 1px #c7c7c7;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    outline: 0px;
 }
-.letras{
+
+.letras {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.letras-text-final {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.letrasInput-Login {
+    position: absolute;
+    margin-top: -10px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 0%;
+}
+.letrasInput-Register {
+    position: absolute;
+    margin-top: -10px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 0%;
+}
+
+.letras-link {
     color: white;
     font-family: cursive;
     font-size: 15px;
     margin-bottom: 10px;
     text-align: center;
-    
 }
-.btn-login{
+
+
+.letras-link:hover {
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.letras-link2 {
+    color: white;
+    font-family: cursive;
+    font-size: 15px;
+    margin-top: 1px;
+    text-align: center;
+}
+
+
+.letras-link2:hover {
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.btn-login {
     margin-top: 20px;
     height: 30px;
-    width: 100px;
-    border-radius: 10px;
-    color: black    ;
-    background-color: white;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+}
+
+.btn-login:hover {
+    transition: 0.5s;
+    box-shadow: 0 0 10px white;
+}
+
+.btn-register {
+    margin-top: 20px;
+    height: 30px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+}
+
+.btn-register:hover {
+    transition: 0.5s;
+    box-shadow: 0 0 10px white;
+}
+
+.login-div2 {
+    margin-top: 30px;
+}
+
+.login-div1 {
+    margin-top: 20px;
+}
+
+.register-div2 {
+    margin-top: 30px;
+}
+
+.register-div1 {
+    margin-top: 20px;
+}
+.register-div3 {
+    margin-top: 30px;
+}
+hr{
+   width: 120px ;
 }
